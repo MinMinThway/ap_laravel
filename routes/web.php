@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 use function Ramsey\Uuid\v1;
@@ -25,4 +25,4 @@ use function Ramsey\Uuid\v1;
 // });
 
 // Route::view("/", "welcome",["name" => "Min Min Thway"]);
-Route::get('/', [HomeController::class,"index"]);
+Route::resource('posts', PostController::class);
